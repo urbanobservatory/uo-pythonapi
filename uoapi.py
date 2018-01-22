@@ -91,20 +91,19 @@ class UrbanAPI:
         log.debug(url)
         return url
 
-    def resolve(self, url):
+    def resolve(self, url, expected_response=200):
         """
         Resolve a URL using the requests library
-        :param url:
+        :param url:               URL to resolve
+        :param expected_response: Status code indicating success
         :return:
         """
-        result = requests.get(url)  # Future HTTP Basic Auth? Add: ", auth=('user', 'pass'))"
+        result = requests.get(url) 
 
-        if result.status_code == 200:
+        if result.status_code == expected_response:
             return result.json()
         else:
             raise APIRequestException("Status: {0}\n\n{1}".format(result.status_code, result.content))
-
-        return
 
     def get_entities(self, page):
         """
