@@ -239,6 +239,8 @@ class UrbanAPI:
         assert(res['timeseries']['timeseriesId'] == test_uuid)
         log.info("PASS\n")
 
+        return True
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
