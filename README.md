@@ -1,12 +1,17 @@
 # uoapi-python
 A python3 module for accessing and querying the Urban Observatory REST API
 
-
+## Installation
+The best way to use this repo is probably to check it out as a submodule: 
+  `git submodule add https://github.com/sjmf/uoapi-python uoapi`
+  
+ Then, install the pip requirements (into your virtualenv, probably):
+ `pip install -r requirements.txt`
+ 
 ## Usage
-
 ```python3
-from uoapi import UrbanAPI  # Import it
-urb = UrbanAPI()            # Construct it
+from uoapi.uoapi import UrbanAPI  # Import it
+urb = UrbanAPI()                  # Construct it
 
 # Get timeseries data from single entity (using datetime objects):
 res = urb.get_timeseries("bd0cc46d-ba2e-4924-a66e-b032d7ca33a5",
