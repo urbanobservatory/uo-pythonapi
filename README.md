@@ -1,9 +1,9 @@
-# uoapi-python
+# Urban Observatory Python3 API Module
 A python3 module for accessing and querying the Urban Observatory REST API
 
 ## Installation
 The best way to use this repo is probably to check it out as a submodule: 
-  `git submodule add https://github.com/sjmf/uoapi-python uoapi`
+  `git submodule add https://github.com/urbanobservatory/uo-pythonapi uoapi`
   
  Then, install the pip requirements (into your virtualenv, probably):
  `pip install -r requirements.txt`
